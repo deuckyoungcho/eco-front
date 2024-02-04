@@ -24,7 +24,6 @@ const columns = [
     key: "stock", name: "총 창고 재고", width: 100, minWidth: 100, formatter({ column, row }) {
       const value = row[column.key];
       const isMinus = parseInt(value, 10) < 0
-      console.log(value, isMinus)
       return <span className={isMinus ? 'cell--warning' : ''}>{value}</span>
     }
   },

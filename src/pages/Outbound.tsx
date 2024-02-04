@@ -95,7 +95,6 @@ function Outbound() {
       try {
         const result = await axios
           .delete(`${serverUrl}/outbounds/${order_no}`)
-        console.log(result);
         await this.fetchOutbound(this.start.toFormat("yyyy-MM-dd"),
           this.end.toFormat("yyyy-MM-dd"))
       } catch (err) {
